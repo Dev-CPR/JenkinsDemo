@@ -3,6 +3,7 @@ package com.cpr.jenkinsdemo
 import android.app.IntentService
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 
 /**
  * An [IntentService] subclass for handling asynchronous task requests in
@@ -22,9 +23,6 @@ private const val ACTION_BAZ = "com.cpr.jenkinsdemo.ui.theme.action.BAZ"
 private const val EXTRA_PARAM1 = "com.cpr.jenkinsdemo.ui.theme.extra.PARAM1"
 private const val EXTRA_PARAM2 = "com.cpr.jenkinsdemo.ui.theme.extra.PARAM2"
 class MyIntentService : IntentService("MyIntentService") {
-
-
-
 
     override fun onHandleIntent(intent: Intent?) {
         when (intent?.action) {
@@ -47,7 +45,7 @@ class MyIntentService : IntentService("MyIntentService") {
      * parameters.
      */
     private fun handleActionFoo(param1: String?, param2: String?) {
-        TODO("Handle action Foo")
+        Toast.makeText(this, "$param1, $param2", Toast.LENGTH_SHORT).show()
     }
 
     /**

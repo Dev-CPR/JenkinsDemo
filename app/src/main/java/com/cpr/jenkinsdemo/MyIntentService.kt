@@ -53,7 +53,7 @@ class MyIntentService : IntentService("MyIntentService") {
      * parameters.
      */
     private fun handleActionBaz(param1: String?, param2: String?) {
-        TODO("Handle action Baz")
+        Toast.makeText(this, "$param1, $param2", Toast.LENGTH_SHORT).show()
     }
 
     companion object {

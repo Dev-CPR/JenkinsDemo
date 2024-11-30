@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello! This code from dev 1 and dev 2 after merging code",
+        text = "Hello This code from DEV 2",
         modifier = modifier
     )
 }
